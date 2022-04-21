@@ -48,6 +48,10 @@ const app = new Vue ({
             }
         },
 
+        big_image(index){
+            this.contatore = index
+        }
+
     }
 
 })
