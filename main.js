@@ -28,11 +28,25 @@ const app = new Vue ({
                 title: 'Paradise',
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
-        ]
+        ],
+
+        contatore: 0
     },
 
     methods:{
-        
+        incremento(){
+            this.contatore++
+            if(this.contatore >= this.locations.length){
+                this.contatore = 0
+            }
+        },
+
+        decremento(){
+            this.contatore--
+            if(this.contatore < 0){
+                this.contatore = this.locations.length -1
+            }
+        }
     }
 
 })

@@ -11,20 +11,20 @@
     <div id="root">
         <div class="container">
             <div class="current_img">
-                <img :src="locations[0].image" alt="">
+                <img :src="locations[contatore].image" alt="">
                 <div class="text">
-                    <h1>Svezia</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, dolor non vel laboriosam quos quia nesciunt. Debitis repellat, exercitationem, rerum architecto inventore dignissimos numquam quisquam quos, cupiditate voluptatem sit nesciunt.</p>
+                    <h1>{{locations[contatore].title}}</h1>
+                    <p>{{locations[contatore].text}}</p>
                 </div>
                 <!-- /.text -->
             </div>
             <!-- /.current_img -->
             <div class="slider">
                 <img :src="location.image" alt="" v-for = "location in locations">
-                <div class="arrow_up">
+                <div class="arrow_up "v-on:click="incremento">
                     &#8657;
                 </div>
-                <div class="arrow_down">
+                <div class="arrow_down" v-on:click="decremento">
                     &#8659;
                 </div>
             </div>
