@@ -50,7 +50,16 @@ const app = new Vue ({
 
         big_image(index){
             this.contatore = index
-        }
+        },
+
+        change_index(){
+                this.contatore++
+                if(this.contatore >= this.locations.length){
+                    this.contatore = 0
+                }
+        },
+
+
 
     }
 
