@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div class="current_img">
+                <img :src="locations[0].image" alt="">
+                <div class="text">
+                    <h1>Svezia</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, dolor non vel laboriosam quos quia nesciunt. Debitis repellat, exercitationem, rerum architecto inventore dignissimos numquam quisquam quos, cupiditate voluptatem sit nesciunt.</p>
+                </div>
+                <!-- /.text -->
+            </div>
+            <!-- /.current_img -->
+            <div class="slider">
+                <img :src="location.image" alt="" v-for = "location in locations">
+                <div class="arrow_up">
+                    &#8657;
+                </div>
+                <div class="arrow_down">
+                    &#8659;
+                </div>
+            </div>
+            <!-- /.slider -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /#root -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
