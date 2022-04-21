@@ -20,11 +20,11 @@
             </div>
             <!-- /.current_img -->
             <div class="slider">
-                <img :src="location.image" alt="" v-for = "location in locations">
-                <div class="arrow_up "v-on:click="incremento">
+                <img :src="location.image" :class="index === contatore ? 'active' : ''" v-for = "(location,index) in locations">
+                <div class="arrow_up "v-on:click="decremento">
                     &#8657;
                 </div>
-                <div class="arrow_down" v-on:click="decremento">
+                <div class="arrow_down" v-on:click="incremento">
                     &#8659;
                 </div>
             </div>

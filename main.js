@@ -46,7 +46,8 @@ const app = new Vue ({
             if(this.contatore < 0){
                 this.contatore = this.locations.length -1
             }
-        }
+        },
+
     }
 
 })
