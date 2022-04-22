@@ -52,13 +52,6 @@ const app = new Vue ({
             this.contatore = index
         },
 
-        change_index(){
-                this.contatore++
-                if(this.contatore >= this.locations.length){
-                    this.contatore = 0
-                }
-        },
-
 
 
     }
